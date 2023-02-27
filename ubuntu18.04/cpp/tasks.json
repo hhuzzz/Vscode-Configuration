@@ -11,7 +11,7 @@
                 "-g",
                 "${file}",
                 "-o",
-                "${fileDirname}\\bin\\${fileBasenameNoExtension}"
+                "${fileDirname}/bin/${fileBasenameNoExtension}"
             ],
             "options": {
                 "cwd": "/usr/bin"
@@ -32,9 +32,9 @@
                 "-std=c++14",
                 "-fdiagnostics-color=always",
                 "-g",
-                "${fileDirname}\\*.cpp",
+                "${fileDirname}/*.cpp",
                 "-o",
-                "${fileDirname}\\bin\\${fileBasenameNoExtension}"
+                "${fileDirname}/bin/${fileBasenameNoExtension}"
             ],
             "options": {
                 "cwd": "/usr/bin"
