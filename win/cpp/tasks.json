@@ -7,6 +7,8 @@
             "command": "D:/Environment/mingw64/bin/g++.exe",
             "args": [
                 "-std=c++17",
+                "-I",
+                "${workspaceFolder}\\cpp_single\\include",
                 "-fdiagnostics-color=always",
                 "-g",
                 "${file}",
@@ -20,7 +22,8 @@
                 "$gcc"
             ],
             "group": {
-                "kind": "build"
+                "kind": "build",
+                "isDefault": true
             },
             "detail": "编译器: D:/Environment/mingw64/bin/g++.exe"
         },
@@ -32,7 +35,7 @@
                 "-std=c++17",
                 "-fdiagnostics-color=always",
                 "-g",
-                "${fileDirname}\\*.cpp",
+                "${fileDirname}\\*.c*", //.c和.cpp文件都包括进去
                 "-o",
                 "${fileDirname}\\bin\\${fileBasenameNoExtension}.exe"
             ],
@@ -40,12 +43,12 @@
                 "cwd": "D:/Environment/mingw64/bin"
             },
             "problemMatcher": [
-                "$gcc"
+                "$gcc",
             ],
             "group": {
                 "kind": "build"
             },
-            "detail": "编译器: D:/Environment/mingw64/bin/g++.exe"
+            "detail": "D:/Environment/mingw64/bin/g++.exe"
         },
     ]
 }
