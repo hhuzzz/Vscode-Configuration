@@ -4,48 +4,51 @@
         {
             "type": "cppbuild",
             "label": "C/C++: run single file",
-            "command": "/usr/bin/g++",
+            "command": "D:/Environment/mingw64/bin/g++.exe",
             "args": [
-                "-std=c++14",
+                "-std=c++17",
+                "-I",   //包含include文件夹下的头文件
+                "${workspaceFolder}\\cpp_single\\include",
                 "-fdiagnostics-color=always",
                 "-g",
                 "${file}",
                 "-o",
-                "${fileDirname}/bin/${fileBasenameNoExtension}"
+                "${fileDirname}\\bin\\${fileBasenameNoExtension}.exe"
             ],
             "options": {
-                "cwd": "/usr/bin"
+                "cwd": "D:/Environment/mingw64/bin"
             },
             "problemMatcher": [
                 "$gcc"
             ],
             "group": {
-                "kind": "build"
+                "kind": "build",
+                "isDefault": true
             },
-            "detail": "编译器: /usr/g++"
+            "detail": "编译器: D:/Environment/mingw64/bin/g++.exe"
         },
         {
             "type": "cppbuild",
             "label": "C/C++: run multiple file",
-            "command": "/usr/bin/g++",
+            "command": "D:/Environment/mingw64/bin/g++.exe",
             "args": [
-                "-std=c++14",
+                "-std=c++17",
                 "-fdiagnostics-color=always",
                 "-g",
-                "${fileDirname}/*.cpp",
+                "${fileDirname}\\*.c*", //.c和.cpp文件都包括进去
                 "-o",
-                "${fileDirname}/bin/${fileBasenameNoExtension}"
+                "${fileDirname}\\bin\\${fileBasenameNoExtension}.exe"
             ],
             "options": {
-                "cwd": "/usr/bin"
+                "cwd": "D:/Environment/mingw64/bin"
             },
             "problemMatcher": [
-                "$gcc"
+                "$gcc",
             ],
             "group": {
                 "kind": "build"
             },
-            "detail": "编译器: /usr/g++"
+            "detail": "D:/Environment/mingw64/bin/g++.exe"
         },
     ]
 }
